@@ -45,7 +45,7 @@
       }
       .banner {
       position: relative;
-      height: 300px;
+      height: 600px;
       background-image: url("https://1382778335.rsc.cdn77.org/wp-content/uploads/2023/02/Mixpanel-analytics-now-embeddable-in-top-collaboration-tools-for-faster-product-innovation.jpg");  
       background-size: cover;
       display: flex;
@@ -200,11 +200,24 @@
     </style>
   </head>
   <body>
-    <div class="testbox">
-      <form action="/">
-        <div class="banner">
+      <div class="banner">
           <h1>Identity Manager V3 Demo</h1>
+     </div>
+    <div class="testbox">
+     <form action="/">
+
+      <div class="question">
+            <label for="fname"> Initialize mixpanel sdk by providing the token<span>*</span></label>
+            <input id="token" type="text" name="token" required/>
+       </div>
+       <div class="btn-block">
+          <button type="submit" href="/">Initialize</button>
         </div>
+      </form>
+       
+   </div>
+   <div class="testbox">
+<form action="/">
         <div class="colums">
           <div class="item">
             <label for="fname"> First Name<span>*</span></label>
