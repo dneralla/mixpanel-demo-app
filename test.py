@@ -10,4 +10,4 @@ spark.conf.set("spark.hadoop.fs.gs.auth.service.account.private.key", "-----BEGI
 spark.conf.set("spark.hadoop.fs.gs.auth.service.account.private.key.id", "0777fb41db82d0de8f4c634ab8d56bffcf07436a")
 
 df = spark.read.table("samples.nyctaxi.trips")
-df.write.format("json").mode("over").save("gs://mixpanel-prod-1-warehouse-imports/testdatabricks/10456")
+df.write.format("json").mode("overwrite").save("gs://mixpanel-prod-1-warehouse-imports/testdatabricks/10456")
