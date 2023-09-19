@@ -15,7 +15,7 @@ def export_to_gcs(args):
     spark.conf.set("fs.gs.auth.service.account.private.key.id", args.service_account_key_id)
 
     df = spark.sql(args.sql)
-    df.write.format(args.export_format).mode("overwrite").save(f"gs://{args.bucket}//{args.prefix}/").option("compression", "gzip").option("header", "true")
+    df.write.format(args.export_format).option("compression", "gzip").option("header", "true").mode("overwrite").save(f"gs://{args.bucket}//{args.prefix}/")
     
 
 if __name__ == '__main__':
